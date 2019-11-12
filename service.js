@@ -10,6 +10,6 @@ self.addEventListener("activate", event => {
     //return self.skipWaiting()
 })
 
-self.addEventListener("fetch", () {
+self.addEventListener("fetch", () => {
     // met en écoute le service
 })
