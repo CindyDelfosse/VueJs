@@ -13,6 +13,7 @@
     });
 
     installBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         installBtn.style.display = 'none';
         // Affiche la demande d’installation 
         deferredPrompt.prompt();
