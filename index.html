@@ -22,30 +22,32 @@
     <meta name="msapplication-TileColor" content="#00D1B2">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#00D1B2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Index app ">
 </head>
 <body>
+    <a href="" class="button is-danger install hidden">Installer</a>
     <div class="wrapper">
-        <head>
-            <h1>Découverte PWA</h1>
-            <nav>
+        <header class="hero is-primary">
+            <h1 class="title">Découverte PWA</h1>
+            <nav class="navbar is-primary">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="" class="navbar-item is-active">Home</a></li>
+                    <li><a href="" class="navbar-item">About</a></li>
+                    <li><a href="" class="navbar-item">Contact</a></li>
                 </ul>
             </nav>
-        </head>
-        <main>
-            <div>
-                <img src="chaton.jpg" alt="image de chaton" width="100%">
-            </div>
+        </header>
+        <main class="container">
+             <img src="chaton.jpg" alt="image de chaton" width="100%">
         </main>
-        <footer>
+        <footer class="footer">
             <p>&copy; 2019 - Cepegra</p>
         </footer>
     </div>
     <script src="sw-register.js"></script>
+    <script src="install.js"></script>
 </body>
 </html>
