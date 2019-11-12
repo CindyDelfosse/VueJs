@@ -1,4 +1,4 @@
-const version = '1.0.0'
+const version = '1.0.1'
 
 self.addEventListener("install", event => {
     console.log("INSTALL service worker version " + version)
@@ -34,6 +34,19 @@ if (workbox) {
             "url" : "favicon.ico"
         }
     ])
+
+    workbox.routing.registerRoute(
+        /(.*)\.(?:png|gif|jpg|css)$/,
+        new workbox.strategies.CacheFirst({
+            cacheName: 'design-cache',
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxEntries: 50,
+                    maxAgeSeconds: 30*24*60*60 // 30days
+                })
+            ] 
+        })
+    )
 } else {
     console.log(`Boo! Workbox didn't load 😬`);
 }
