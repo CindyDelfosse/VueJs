@@ -32,6 +32,9 @@ if (workbox) {
         },
         {
             "url" : "favicon.ico"
+        },
+        {
+            "url" : "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
         }
     ])
 
@@ -45,6 +48,18 @@ if (workbox) {
                     maxAgeSeconds: 30*24*60*60 // 30days
                 })
             ] 
+        })
+    )
+
+    workbox.routing.registerRoute(
+        "https://api.irail.be/stations/?format=json", 
+        new workbox.strategies.NetworkFirst({
+            cacheName: "api-cache",
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxAgeSeconds: 30*24*60*60
+                })
+            ]
         })
     )
 } else {
