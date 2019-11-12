@@ -9,3 +9,7 @@ self.addEventListener("activate", event => {
     console.log("ACTIVATE service worker version " + version)
     //return self.skipWaiting()
 })
+
+self.addEventListener("fetch", () {
+    // met en écoute le service
+})
