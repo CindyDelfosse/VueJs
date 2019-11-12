@@ -35,6 +35,18 @@ if (workbox) {
         },
         {
             "url" : "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+        },
+        {
+            "url" : "main.js"
+        },
+        {
+            "url" : "install.js"
+        },
+        {
+            "url" : "sw-register.js"
+        },
+        {
+            "url" : "https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
         }
     ])
 
